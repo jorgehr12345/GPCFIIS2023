@@ -49,7 +49,7 @@ int main() {
     vector<Long>::iterator it2 = lower_bound(vec.begin(), vec.end(), 30);
     set<Long>::iterator it3 = se.lower_bound(30);
     if (it3 == se.end()) {
-        cout << "No existe valor mayor a 30" << endl;
+        cout << "No existe valor mayor o igual a 30" << endl;
     } else {
         cout << "Valor mayor o igual a 30: " << *it3 << endl;
     }
