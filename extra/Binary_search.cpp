@@ -19,6 +19,7 @@ int main() {
     for (int i = 1; i <= n; i++) {
         cin >> arre[i];
     }
+    // INICIO BINARY SEARCH
     Long ini = 1, fin = n;
     while (ini <= fin) {
         Long med = (ini + fin) / 2;
@@ -33,6 +34,7 @@ int main() {
     } else {
         cout << "No hay rpta" << endl;
     }
+    // FIN BINARY SEARCH
 
     vector<Long> vec;
     set<Long> se;
