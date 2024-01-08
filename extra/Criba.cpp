@@ -21,8 +21,8 @@ const long double PI = acos(-1.0);
 
 vector<ll> adj2;
 ll primerFactor[MX];
+bool primo[MX];
 void criba(ll n) {
-    bool primo[MX];
     primo[0] = primo[1] = true;
     for (ll i = 1; i <= n; i++) {
         primerFactor[i] = i;
