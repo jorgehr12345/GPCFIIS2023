@@ -31,7 +31,9 @@ void criba(ll n) {
         if (primo[i] == false) {
             for (long long j = 2 * i; j <= n; j += i) {
                 primo[j] = true;
-                primerFactor[j] = i;
+                if (primerFactor[j] == j) {
+                    primerFactor[j] = i;
+                }
             }
         }
     }
@@ -79,7 +81,7 @@ int main() {
             s /= primerFactor[num];
             cont++;
         }
-        descomposicion.pb({num, s});
+        descomposicion.pb({primerFactor[num], cont});
     }
     for (ll i = 0; i < descomposicion.size(); i++) {
         cout << descomposicion[i].first << " " << descomposicion[i].second << endl;
