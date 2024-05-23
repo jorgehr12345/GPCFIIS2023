@@ -63,6 +63,16 @@ vector<ll> obtener_divisores(ll x) {
     return ans;
 }
 
+ll pot_mod(ll a, ll b, ll c) {
+    if (b == 0) {
+        return 1 % c;
+    }
+    int temp = pot_mod(a, b / 2, c);
+    temp = (temp * temp) % c;
+    if (b % 2 == 0) return temp;
+    return (temp * (a % c)) % c;
+}
+
 int main() {
     inic;
     inic2;
